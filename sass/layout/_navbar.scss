@@ -1,0 +1,33 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.header__nav {
+  font-size: 21px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding-right: 100px;
+  gap: 48px;
+  a {
+    text-decoration: none;
+    color: variables.$menu;
+  }
+  a.home {
+    color: white;
+    position: relative;
+  }
+  a.home::before,
+  a:hover::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 65%;
+    background-color: variables.$menu_barra;
+    bottom: -8px;
+    border-radius: 5px;
+  }
+  a:hover {
+    color: variables.$menu_hover;
+    position: relative;
+  }
+}

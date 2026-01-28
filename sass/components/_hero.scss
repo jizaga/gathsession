@@ -1,0 +1,69 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-right: 80px;
+  margin-top: 42px;
+  margin-bottom: 24px;
+}
+
+.hero__content h1 {
+  font-family: variables.$title-font;
+  font-size: 80px;
+  line-height: 100px;
+  font-weight: 900;
+  color: variables.$title;
+  margin-bottom: 30px;
+}
+
+.hero__content .description {
+  color: variables.$description;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 40px;
+  max-width: 80%;
+  margin-bottom: 32px;
+}
+
+.hero__content .getstarted {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 144px;
+  gap: 32px;
+}
+
+.hero__content a.getstarted_boton {
+  display: inline-block;
+  background-color: variables.$boton;
+  color: white;
+  font-size: 18px;
+  padding: 17px 67px;
+  border-radius: 15px 15px 15px 0px;
+  text-decoration: none;
+}
+
+.hero__content a.getstarted_boton:hover {
+  background-color: variables.$boton_hover;
+}
+
+.hero__content a.getstarted_link {
+  font-family: variables.$link-font;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+.hero__content a.getstarted_link:hover {
+  color: variables.$boton_hover;
+}
+
+.hero__content a.getstarted_link::after {
+  content: url("../img/icon-arrow.svg");
+  padding-left: 10px;
+  vertical-align: text-top;
+}

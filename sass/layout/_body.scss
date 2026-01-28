@@ -1,0 +1,31 @@
+@use "../abstracts/variables";
+
+body {
+  background-color: variables.$fondo_general;
+  max-width: variables.$max-width-container;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  bottom: -350px; /* Ajusta la posición vertical */
+  right: -150px; /* Ajusta la posición horizontal */
+  width: 1102px; /* Tamaño del círculo */
+  height: 1102px; /* Tamaño del círculo */
+  border: 2px solid rgba(255, 255, 255, 0.25); /* Color con transparencia */
+  border-radius: 50%; /* Hace que sea un círculo */
+  z-index: -1; /* Lo pone detrás del contenido */
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  bottom: -410px; /* Ajusta la posición vertical */
+  right: -150px; /* Ajusta la posición horizontal */
+  width: 850px; /* Tamaño del círculo */
+  height: 850px; /* Tamaño del círculo */
+  border: 2px solid rgba(255, 255, 255, 0.25); /* Color con transparencia */
+  border-radius: 50%; /* Hace que sea un círculo */
+  z-index: -1; /* Lo pone detrás del contenido */
+}

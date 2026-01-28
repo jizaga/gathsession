@@ -1,0 +1,20 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.header__logo {
+  font-family: variables.$title-font;
+  font-size: 36px;
+  font-weight: 500;
+  text-decoration: none;
+  color: variables.$logo_izquierda;
+  span {
+    color: variables.$logo_derecha;
+  }
+}
